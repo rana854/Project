@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: ranatarek/devops-app:v1
+        image: ranatarek/devops-app:v3
         ports:
         - containerPort: 5000

@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Image
-      run: docker build -t ranatarek/devops-app:latest .
+      run: docker build -t ranatarek/devops-app:v3 .
 
     - name: Push Image
-      run: docker push ranatarek/devops-app:latest
+      run: docker push ranatarek/devops-app:v3
